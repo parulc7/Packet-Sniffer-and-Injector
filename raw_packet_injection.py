@@ -3,8 +3,8 @@ import sys, socket, struct
 try:
     raw_socket = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))
 
-except socket.error as e:
-    print(e)
+except socket.error as t:
+    print(t)
     sys.exit()
 
 raw_socket.bind(("wlo1", socket.htons(0x0800)))
